@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Roti</title>
+  <style>
+    :root {
+      --bg: #fff7e6;
+      --primary: #2c2c2c;
+      --accent: #25d366;
+      --border: #ddd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg);
+      color: var(--primary);
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    img.logo {
+      max-width: 120px;
+      height: auto;
+    }
+
+    h1, h2 {
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .produk {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+      padding: 0 15px;
+      margin-bottom: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 10px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    form {
+      max-width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    button, .toggle-btn {
+      padding: 12px;
+      background-color: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .toggle-btn {
+      background-color: #f4f4f4;
+      color: var(--primary);
+      border: 1px solid var(--border);
+      text-align: left;
+      margin: 10px auto 0;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    .toggle-menu {
+      list-style: none;
+      padding-left: 0;
+      margin: 10px auto 30px;
+      max-width: 90%;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+
+    .text-menu {
+      margin-top: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f1f1f1;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      .produk, .menu-grid {
+        padding: 0 40px;
+        gap: 25px;
+      }
+
+      form {
+        max-width: 400px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="file-LY9nfu6kd2nQNWamdvzbpE" alt="Logo Toko" class="logo" />
+    <h1>Produk Unggulan Kami</h1>
+  </header>
+
+  <section>
+    <button class="toggle-btn" onclick="toggleMenu('kue')">🍪 Aneka Kue Kering & Basah</button>
+    <div id="kue" class="toggle-menu hidden">
+      <div class="menu-grid">
+        <div class="card">
+          <img src="https://via.placeholder.com/100" alt="Kue Lapis">
+          <h4>Kue Lapis</h4>
+          <p>Rp. 3000</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/100" alt="Kue Lumpur">
+          <h4>Kue Lumpur</h4>
+          <p>Rp. 2500</p>
+        </div>
+      </div>
+      <div class="text-menu">
+        <h4>Roti Manis</h4>
+        <ul>
+          <li>Roti Coklat - Rp. 2000</li>
+          <li>Roti Pisang - Rp. 2500</li>
+        </ul>
+        <h4>Roti Asin</h4>
+        <ul>
+          <li>Roti Abon - Rp. 3000</li>
+          <li>Roti Keju - Rp. 2800</li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    
+  
+
+
+<button class="toggle-btn" onclick="toggleMenu('ricebowl')">🍛 Rice Bowl</button>
+    <div id="ricebowl" class="toggle-menu hidden">
+  <div class="menu-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Rice Bowl Ayam">
+        <h4>Rice Bowl Ayam</h4>
+        <p>Rp. 15000</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Rice Bowl Sapi">
+        <h4>Rice Bowl Sapi</h4>
+        <p>Rp. 18000</p>
+      </div>
+</div>
+
+<button class="toggle-btn" onclick="toggleMenu('makananlain')">🍱 Makanan Lain</button>
+    <div id="makananlain" class="toggle-menu hidden">
+  <div class="menu-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Makaroni Schotel">
+        <h4>Makaroni Schotel</h4>
+        <p>Rp. 4000</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Tahu Bakso">
+        <h4>Tahu Bakso</h4>
+        <p>Rp. 3500</p>
+      </div>
+</div>
+</section>
+
+  <section>
+    <h2>Pesan Sekarang</h2>
+    <form id="orderForm">
+      <input type="text" id="nama" placeholder="Nama Anda" required>
+      <select id="produk" required>
+        <option value="">Pilih Produk</option>
+        <option value="Pastel">Pastel</option>
+        <option value="Pizza Mini">Pizza Mini</option>
+      </select>
+      <input type="number" id="jumlah" placeholder="Jumlah" required>
+      <textarea id="catatan" placeholder="Catatan Tambahan (Opsional)"></textarea>
+      <button type="submit">Pesan via WhatsApp</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Lokasi & Testimoni</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.0581946374015!2d112.6255389141537!3d-7.878502579367026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7874dc9f14adfb%3A0x9f67c1f62f8eb70!2sContoh%20Lokasi!5e0!3m2!1sid!2sid!4v1624110745023!5m2!1sid!2sid"
+      loading="lazy">
+    </iframe>
+    <p>Alamat: Jl. Contoh No.123, Kota Roti, Indonesia</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Toko Roti | Dibuat dengan ❤️</p>
+  </footer>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const nama = document.getElementById("nama").value;
+      const produk = document.getElementById("produk").value;
+      const jumlah = document.getElementById("jumlah").value;
+      const catatan = document.getElementById("catatan").value;
+
+      const message = `Halo, saya ingin memesan:\nNama: ${nama}\nProduk: ${produk}\nJumlah: ${jumlah}\nCatatan: ${catatan}`;
+      const phone = "628123456789";
+      const whatsappURL = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, "_blank");
+    });
+
+    function toggleMenu(id) {
+      const menu = document.getElementById(id);
+      menu.classList.toggle("hidden");
+    }
+  </script>
+
+</body>
+</html>
